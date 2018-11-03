@@ -4,7 +4,7 @@
   "description": "",
   "main": "functions/biscuits.js",
   "scripts": {
-    "build": "netlify-lambda build express"
+    "build": "netlify-lambda build thing"
   },
   "author": "",
   "license": "ISC",
