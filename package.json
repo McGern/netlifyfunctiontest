@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.0.2"
   }
 }
