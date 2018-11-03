@@ -2,14 +2,18 @@
   "name": "functions",
   "version": "1.0.0",
   "description": "",
-  "main": "functions/biscuits.js",
+  "main": "functions/server.js",
   "scripts": {
-    "build": "netlify-lambda build thing"
+    "build": "netlify-lambda build functions"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.22.2"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "firebase-admin": "^6.1.0",
+    "moment": "^2.22.2",
+    "serverless-http": "^1.8.0"
   },
   "devDependencies": {
     "netlify-lambda": "^1.0.2"
