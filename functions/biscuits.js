@@ -1,10 +1,10 @@
-var moment = require('moment'); 
+//var moment = require('moment'); 
 
 exports.handler = function(event, context, callback) {
-  var d = moment();
+  //var d = moment();
   
   callback(null, {
     statusCode: 200,
-    body: "Hello, World please" + d.format()
+    body: "Hello, World please"
   });
 };
