@@ -36,7 +36,7 @@ router.post('/', (req, res) => res.json({ postBody: req.body }));
 router.get("/users", async function (request, response) {
   var userRef = db.collection('users');
 
-  var users = [];
+  var users = ["hello"];
   var docs = await userRef.where('psid', '>', '').get();
   docs.forEach( doc => {
     var data = doc.data();
