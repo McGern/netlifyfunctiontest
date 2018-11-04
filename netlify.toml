@@ -1,3 +1,12 @@
 [build]
-  command = "npm install && npm run build"
-  functions = "functions"
+	command = "npm install && npm run build"
+	functions = "functions"
+[build.environment]
+	# note: .env is a shell file so there can't be spaces around =
+	# Your Firebase Project ID. See https://console.firebase.google.com/
+	PROJECT_ID="fir-testagent"
+
+	# Create a Service Account in Firebase, paste the following values from the generated JSON file below
+	# see https://firebase.google.com/docs/server/setup
+	CLIENT_EMAIL="firebase-adminsdk-48zvz@fir-testagent.iam.gserviceaccount.com"
+	PRIVATE_KEY=$'-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCddICpg2S9+e6z\ne7EVHjAkvq6nq50M64wD+PJbHb8xvF9X2qT1zbENzRDAiNb+lQbJaEWWdMlr3Q62\ngweiu9xa9fAyrXd0Pcq9EnRy6gk1OMBLmEnYE/37fCuIYBPT8VJo4hiproRMwN8L\noEL/HyTLhj476vedB4TxQCjSgkE9s2lxyn9cqOPFq22VQ6TXvuyiIcMineZkyC1Z\nKRQX726dd/LZkqTRrPBV9PMy2YaYCXM0XKPKuBO9XL5S6uQ71r0GJnuj21/uDo/k\nF61k0n9M0MjbUDQ7bOgtmwKzbid3EGHrwRBvvuwitdRncvxKQ+ULYvfJ7VsRWlG9\n6m3Bf6HhAgMBAAECggEABWcKmxu1CIew1wZhdxYIFNquEiFjTB7bjloBBtCoehkP\n3xXTdH5QRZGfB4bVHvsXYTBrYtQzAmPIA3R6KJfwNvbFUm0n8hxvU7l0YWpXp98r\nSey5wT4+XV35/b3o2uwm0GPMRiuEwpVuPG838ppWSt1vo+KrXan1DR9kcdn3nxmh\nAhHVuRTkGG3QmnpAca9LrapJ9AkhqK8YOE0Wo9vjD+Tltz1twm6/psM2y1z56GUd\n8o29/2E6CHtfM5LoaJDnIBeOXoPKAI39TNKSrr4oDaNE1j28SwhPQA81QFh32WOF\nXSkHA3t8xW8+mmXO91QxgALSnOFcq7OlUh6VkPf/oQKBgQDZF29ef2mmetpS6XQQ\nDimNxZ3o7fni2j/SmBrQHq4tnPKdDRAENdfQrh45+2Hcjg3nVRXeXyPJJsrzZJoR\nGLbjLfdonAAFlk8WsoxVk8mdFozft+EyCVbCNM+6HCsN8RBD3AgOUMKN4Sj/x5y7\nF0vGlYK+8WFocdtDM5vq8h5UPQKBgQC5rNXz+xSaa0+VIqTSf7CJyRbVAfhLSN86\nt/NxU/euUYHjaB7JAGnyoOjWXwkqYE/7Bcqd+lqGWiXAbOYxFNu7EaLXI9hCF7El\nPC8vSiV7ZSu4sjTPj5lED5Y794f96cz0A06UxYW2a0qk7Q2UevBvV9wg5XO2PWbO\nIW2Wq4fKdQKBgDEO5LH8JQnkFVZLP1kpeiZ5k/fBX4juPSIAEX8aj83q+8CV5Rqu\neDjGQDpmHnVS/L1cMvbvlQyt4YsjHtXiOeIYzyIqrq6UiwbcDm6AWT1QjUE5MoC2\nL47vlEnAd9JMuZo8LO3fPjgFu9ghab+1wf/8ZXF05shNgnkrPn7XfBcZAoGBAI3p\nZdWGb+beYgMQaX1hjuKgyUygps+TsNpGQlC55rJbJbVTnUPvhwqkpZFDLdQvrLGl\naYl5EbtiJzx9fyrAUHkYL6fTg7RwOzrEVyQDvcYkO1h9DBQgIvp8F01aEZymF7ng\n1SysE1irhG+tpxV3KVFQi7Sw6tG8+FhQAFyKWc0JAoGBAJxbIfKjaiMNZj0Tn7vp\nURRAJ6xuZqyPPlVZFObrIOqur8LNAi00ODIObFS7BSTMk/oih+SCfaPera/uJlbo\nKOS1tTohIzNOHsGVqrj1brtCimO6U0OwxcS9drQqkRqJWAbMubF1QkQHSaUBNoIH\nwKV0LA6G6QUh9pjUtLxFTfHi\n-----END PRIVATE KEY-----\n'
