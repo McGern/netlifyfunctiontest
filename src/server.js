@@ -36,17 +36,21 @@ router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
 
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
-router.get("/users", async function (request, response) {
+router.get("/users", function (request, response) {
   var userRef = db.collection('users');
 
   var users = [{thing:"hello"}];
-  var docs = await userRef.where('psid', '>', '').get();
+  var docs = userRef.where('psid', '>', '').get().then( docs => {
   docs.forEach( doc => {
     var data = doc.data();
     users.push({id:doc.id, firstName: data.name, psid: data.psid} );
   });
+	res.send(users);
+  }).catch(e) {
+	res.send(e);
+  }
 
-  response.json(users);
+  //response.json(users);
 
 });
 
