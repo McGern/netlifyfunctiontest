@@ -25,25 +25,28 @@ const db = admin.firestore();
 db.settings({timestampsInSnapshots: true});
 
 const router = express.Router();
+
 router.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!</h1>');
   res.end();
 });
+
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 router.get("/users", async function (request, response) {
   var userRef = db.collection('users');
 
-  var users = ["hello"];
+  var users = [{thing:"hello"}];
   var docs = await userRef.where('psid', '>', '').get();
   docs.forEach( doc => {
     var data = doc.data();
     users.push({id:doc.id, firstName: data.name, psid: data.psid} );
   });
 
-  response.send(users);
+  response.json(users);
 
 });
 
