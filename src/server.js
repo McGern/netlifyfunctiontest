@@ -45,9 +45,9 @@ router.get("/users", function (request, response) {
     var data = doc.data();
     users.push({id:doc.id, firstName: data.name, psid: data.psid} );
   });
-	res.send(users);
+	response.send(users);
   }).catch(e => {
-	res.send(e);
+	response.send(e);
   })
 
   //response.json(users);
